@@ -1,4 +1,3 @@
-// 10:40 17/06/26
 package main
 
 import (
