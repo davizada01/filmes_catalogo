@@ -34,7 +34,8 @@ func main() {
 		fmt.Println("\n1. Adicionar um novo filme")
 		fmt.Println("2. Listar filmes")
 		fmt.Println("3. Excluir filme")
-		fmt.Println("4. Sair")
+		fmt.Println("4. Buscar Filme")
+		fmt.Println("5. Sair")
 		fmt.Print("\nEscolha uma opção:")
 
 		scanner.Scan()
@@ -48,6 +49,8 @@ func main() {
 		case "3":
 			removerFilme(scanner)
 		case "4":
+			buscarFilme(scanner)
+		case "5":
 			fmt.Println("\nSaindo do catálogo...")
 			return
 		default:
@@ -61,6 +64,8 @@ func main() {
 func carregarDados() {
 	dados, err := os.ReadFile(arquivoBD)
 	if err != nil {
+		fmt.Println("AVISO: O Arquivo JSON não foi encontrado: ", err)
+		fmt.Print("Verifique se o terminal está na pasta correta.\n\n")
 		return
 	}
 	json.Unmarshal(dados, &catalogo)
@@ -175,4 +180,33 @@ func removerFilme(scanner *bufio.Scanner) {
 
 	catalogo = append(catalogo[:indice], catalogo[indice+1:]...)
 	salvarDados()
+}
+
+func buscarFilme(scanner *bufio.Scanner) {
+	if len(catalogo) == 0 {
+		fmt.Println("\nO catálogo está vazio!")
+		return
+	}
+
+	fmt.Println("\nDigite uma parte do título do filme: ")
+	scanner.Scan()
+	termoBusca := strings.ToLower(strings.TrimSpace(scanner.Text()))
+
+	encontrou := false
+	fmt.Println("---Resultados da Busca---")
+
+	for _, filme := range catalogo {
+		tituloMinusculo := strings.ToLower(filme.Titulo)
+
+		if strings.Contains(tituloMinusculo, termoBusca) {
+			generosFormados := strings.Join(filme.Generos, ", ")
+			fmt.Printf("- %s (%d) | Mídia: %s - %s\n", filme.Titulo, filme.Ano, filme.Formato, generosFormados)
+			encontrou = true
+		}
+	}
+
+	if !encontrou{
+		fmt.Println("Nenhum filme encontrado com esse nome")
+	}
+
 }
