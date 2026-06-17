@@ -1,4 +1,4 @@
-
+// 10:40 17/06/26
 package main
 
 import (
@@ -241,3 +241,4 @@ func buscarFilme(scanner *bufio.Scanner) {
 		texto = strings.ReplaceAll (texto, "ç", "c")
 		return texto
 	}
+
