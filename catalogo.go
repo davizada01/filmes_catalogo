@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -188,25 +189,55 @@ func buscarFilme(scanner *bufio.Scanner) {
 		return
 	}
 
-	fmt.Println("\nDigite uma parte do título do filme: ")
+	fmt.Println("\nDigite um termo de busca (filme, diretor, formato ou gênero): ")
 	scanner.Scan()
-	termoBusca := strings.ToLower(strings.TrimSpace(scanner.Text()))
+	textoBusca := scanner.Text()
 
+	termoBuscaLimpo := removerAcentos(strings.ToLower(textoBusca))
 	encontrou := false
-	fmt.Println("---Resultados da Busca---")
+	fmt.Println("----Resultados da Busca----")
 
 	for _, filme := range catalogo {
-		tituloMinusculo := strings.ToLower(filme.Titulo)
+		tituloLimpo := removerAcentos(strings.ToLower(filme.Titulo))
+		diretorLimpo := removerAcentos(strings.ToLower(filme.Diretor))
+		formatoLimpo := removerAcentos(strings.ToLower(filme.Formato))
 
-		if strings.Contains(tituloMinusculo, termoBusca) {
-			generosFormados := strings.Join(filme.Generos, ", ")
-			fmt.Printf("- %s (%d) | Mídia: %s - %s\n", filme.Titulo, filme.Ano, filme.Formato, generosFormados)
+		encontrouNoGenero := false
+		for _, genero := range filme.Generos {
+			generoLimpo := removerAcentos(strings.ToLower(genero))
+			if strings.Contains(generoLimpo, termoBuscaLimpo) {
+				encontrouNoGenero = true
+			}
+		}
+
+		if strings.Contains(tituloLimpo, termoBuscaLimpo) || strings.Contains(diretorLimpo, termoBuscaLimpo) || strings.Contains(formatoLimpo, termoBuscaLimpo) || encontrouNoGenero {
+			fmt.Println("Nome: ", filme.Titulo)
+			fmt.Println("Diretor: ", filme.Diretor)
+			fmt.Println("Gêneros: ", strings.Join(filme.Generos, ", "))
+			fmt.Println("Formato: ", filme.Formato)
+			fmt.Println("-------------------------")
 			encontrou = true
 		}
 	}
 
 	if !encontrou{
-		fmt.Println("Nenhum filme encontrado com esse nome")
+		fmt.Println("Nenhum filme encontrado!!")
+		fmt.Println("Digite nome do FILME, DIRETOR, FORMATO OU GÊNERO que você quer encontrar!")
 	}
-
 }
+	
+	func removerAcentos (texto string) string {
+		texto = strings.ReplaceAll (texto, "á", "a")
+		texto = strings.ReplaceAll (texto, "à", "a")
+		texto = strings.ReplaceAll (texto, "ã", "a")
+		texto = strings.ReplaceAll (texto, "â", "a")
+		texto = strings.ReplaceAll (texto, "é", "e")
+		texto = strings.ReplaceAll (texto, "ê", "e")
+		texto = strings.ReplaceAll (texto, "í", "i")
+		texto = strings.ReplaceAll (texto, "ó", "o")
+		texto = strings.ReplaceAll (texto, "õ", "o")
+		texto = strings.ReplaceAll (texto, "ô", "o")
+		texto = strings.ReplaceAll (texto, "ú", "u")
+		texto = strings.ReplaceAll (texto, "ç", "c")
+		return texto
+	}
