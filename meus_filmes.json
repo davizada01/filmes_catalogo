@@ -1988,5 +1988,18 @@
   "formato": "DVD",
   "idioma": "Português",
   "classificacao": "12 (BR)"
+ },
+ {
+  "titulo": "Fantástica Fábrica de Chocolate",
+  "ano": 2005,
+  "duracao": "1h 55min",
+  "genero": [
+   "Fantasia"
+  ],
+  "diretor": "Tim Burton",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "10 (BR)"
  }
 ]
