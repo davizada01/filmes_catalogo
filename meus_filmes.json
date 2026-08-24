@@ -2001,5 +2001,73 @@
   "formato": "DVD",
   "idioma": "Português",
   "classificacao": "10 (BR)"
+ },
+ {
+  "titulo": "Amadeus",
+  "ano": 1984,
+  "duracao": "3h",
+  "genero": [
+   "Drama",
+   "Histórico"
+  ],
+  "diretor": "Milos Forman",
+  "edicao": "Edição Especial - Versão do Diretor",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "titulo": "O Segredo de Brokeback Mountain",
+  "ano": 2005,
+  "duracao": "2h 14min",
+  "genero": [
+   "Drama",
+   "Romance"
+  ],
+  "diretor": "Ang Lee",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "titulo": "Adeus Minha Concubina",
+  "ano": 1993,
+  "duracao": "2h 51min",
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Chen Kaige",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "titulo": "Crepúsculo dos Deuses",
+  "ano": 1950,
+  "duracao": "1h 50min",
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Billy Wilder",
+  "edicao": "Edição Especial para Colecionadores",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "10 (BR)"
+ },
+ {
+  "titulo": "O Fabuloso Destino de Amelie Poulain",
+  "ano": 2001,
+  "duracao": "2h 2min",
+  "genero": [
+   "Comédia",
+   "Romance"
+  ],
+  "diretor": "Jean-Pierre Jeunet",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
  }
 ]
