@@ -7,9 +7,11 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Filme struct {
+	ID 			  string   `json:"id"`
 	Titulo        string   `json:"titulo"`
 	Ano           int      `json:"ano"`
 	Duracao       string   `json:"duracao"`
@@ -69,6 +71,17 @@ func carregarDados() {
 		return
 	}
 	json.Unmarshal(dados, &catalogo)
+
+	teveAlteracao := false
+	for i := range catalogo {
+		if catalogo[i].ID == "" {
+			catalogo [i].ID = gerarID()
+			teveAlteracao = true
+		}
+	}
+	if teveAlteracao {
+		salvarDados()
+	}
 }
 
 func salvarDados() {
@@ -131,6 +144,8 @@ func adicionarFilme(scanner *bufio.Scanner) {
 	fmt.Println("Classificação Indicativa (Ex.: 14 (BR) ou PG-13 (USA)): ")
 	scanner.Scan()
 	novoFilme.Classificacao = scanner.Text()
+
+	novoFilme.ID = gerarID()
 
 	catalogo = append(catalogo, novoFilme)
 	salvarDados()
@@ -240,4 +255,8 @@ func buscarFilme(scanner *bufio.Scanner) {
 		texto = strings.ReplaceAll (texto, "ç", "c")
 		return texto
 	}
+
+func gerarID() string {
+	return fmt.Sprintf("%d", time.Now().UnixNano())
+}
 
