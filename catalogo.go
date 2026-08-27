@@ -8,6 +8,10 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode"
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 )
 
 type Filme struct {
@@ -168,7 +172,7 @@ func listarFilme() {
 
 func removerFilme(scanner *bufio.Scanner) {
 	if len(catalogo) == 0 {
-		fmt.Println("O catálogo está vazio! ")
+		fmt.Println("O catálogo está vazio!")
 		return
 	}
 
@@ -181,7 +185,7 @@ func removerFilme(scanner *bufio.Scanner) {
 	numeroDigitado, err := strconv.Atoi(strings.TrimSpace(input))
 
 	if err != nil || numeroDigitado < 0 || numeroDigitado > len(catalogo) {
-		fmt.Println("Número ainda não foi registrado. Selecione um número válido")
+		fmt.Println("Número inválido. Selecione um número válido da lista.")
 		return
 	}
 	if numeroDigitado == 0 {
@@ -190,10 +194,18 @@ func removerFilme(scanner *bufio.Scanner) {
 	}
 
 	indice := numeroDigitado - 1
+	idParaRemover := catalogo[indice].ID
 
 	fmt.Printf("Filme '%s' foi excluído da lista.\n\n", catalogo[indice].Titulo)
 
-	catalogo = append(catalogo[:indice], catalogo[indice+1:]...)
+	var novoCatalogo []Filme
+	for _, filme := range catalogo {
+		if filme.ID != idParaRemover {
+			novoCatalogo = append(novoCatalogo, filme)
+		}
+	}
+	
+	catalogo = novoCatalogo
 	salvarDados()
 }
 
@@ -241,19 +253,11 @@ func buscarFilme(scanner *bufio.Scanner) {
 }
 	
 	func removerAcentos (texto string) string {
-		texto = strings.ReplaceAll (texto, "á", "a")
-		texto = strings.ReplaceAll (texto, "à", "a")
-		texto = strings.ReplaceAll (texto, "ã", "a")
-		texto = strings.ReplaceAll (texto, "â", "a")
-		texto = strings.ReplaceAll (texto, "é", "e")
-		texto = strings.ReplaceAll (texto, "ê", "e")
-		texto = strings.ReplaceAll (texto, "í", "i")
-		texto = strings.ReplaceAll (texto, "ó", "o")
-		texto = strings.ReplaceAll (texto, "õ", "o")
-		texto = strings.ReplaceAll (texto, "ô", "o")
-		texto = strings.ReplaceAll (texto, "ú", "u")
-		texto = strings.ReplaceAll (texto, "ç", "c")
-		return texto
+		t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+
+		textoSemAcento, _, _ := transform.String(t, texto)
+
+		return textoSemAcento
 	}
 
 func gerarID() string {
