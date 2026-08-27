@@ -2248,5 +2248,230 @@
   "formato": "DVD",
   "idioma": "Português",
   "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787841120931398700",
+  "titulo": "Um Tira da Pesada",
+  "ano": 1984,
+  "duracao": "1h 45min",
+  "genero": [
+   "Comédia",
+   "Ação"
+  ],
+  "diretor": "Martin Brest",
+  "edicao": "Edição Especial para Colecionadores",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787841378866960000",
+  "titulo": "Um Tira da Pesada II",
+  "ano": 1987,
+  "duracao": "1h 43min",
+  "genero": [
+   "Ação",
+   "Comédia"
+  ],
+  "diretor": "Tony Scott",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1787841459810802200",
+  "titulo": "Um Tira da Pesada III ",
+  "ano": 1994,
+  "duracao": "1h 45min",
+  "genero": [
+   "Ação",
+   "Comédia"
+  ],
+  "diretor": "John Landis",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1787841569082546700",
+  "titulo": "Tudo Por Dinheiro",
+  "ano": 1997,
+  "duracao": "1h 37min",
+  "genero": [
+   "Comédia",
+   "Ação"
+  ],
+  "diretor": "Brett Ratner",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787841710842940800",
+  "titulo": "21 Gramas",
+  "ano": 2003,
+  "duracao": "2h 04min",
+  "genero": [
+   "Suspense",
+   "Drama"
+  ],
+  "diretor": "Alejandro Iñárritu",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1787841820466424400",
+  "titulo": "Predador",
+  "ano": 1987,
+  "duracao": "1h 47min",
+  "genero": [
+   "Ação",
+   "Suspense",
+   "Ficção Científica"
+  ],
+  "diretor": "John McTiernan",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1787841887657711800",
+  "titulo": "Predador 2",
+  "ano": 1990,
+  "duracao": "1h 48min",
+  "genero": [
+   "Ação",
+   "Suspense",
+   "Ficção Científica"
+  ],
+  "diretor": "Stephen Hopkins",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787841970281742000",
+  "titulo": "Alien vs. Predador",
+  "ano": 2004,
+  "duracao": "1h 11min",
+  "genero": [
+   "Ação",
+   "Suspense",
+   "Terror"
+  ],
+  "diretor": "Paul W. S. Anderson",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787842056794370800",
+  "titulo": "Mary Poppins",
+  "ano": 1964,
+  "duracao": "2h 19min",
+  "genero": [
+   "Musical"
+  ],
+  "diretor": "Robert Stevenson",
+  "edicao": "Edição Especial",
+  "formato": "DVD Disco Duplo",
+  "idioma": "Português",
+  "classificacao": "L (BR)"
+ },
+ {
+  "id": "1787842138698290300",
+  "titulo": "Herói",
+  "ano": 2002,
+  "duracao": "1h 39min",
+  "genero": [
+   "Drama",
+   "Ação"
+  ],
+  "diretor": "Zhang Yimou",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787842281962123700",
+  "titulo": "Hellraiser - Nascido no Inferno",
+  "ano": 1987,
+  "duracao": "1h 33min",
+  "genero": [
+   "Terror",
+   "Suspense"
+  ],
+  "diretor": "Cliver Barker",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787842393593929300",
+  "titulo": "Questão de Honra",
+  "ano": 1992,
+  "duracao": "2h 18min",
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Rob Reiner",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "10 (BR)"
+ },
+ {
+  "id": "1787842465361711300",
+  "titulo": "O Escondido",
+  "ano": 1987,
+  "duracao": "1h 37min",
+  "genero": [
+   "Ficção Científica",
+   "Terror"
+  ],
+  "diretor": "Jack Shoulder",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1787842528458185800",
+  "titulo": "Os Goonies",
+  "ano": 1985,
+  "duracao": "1h 54min",
+  "genero": [
+   "Aventura",
+   "Comédia"
+  ],
+  "diretor": "Richard Donner",
+  "edicao": "Padrão",
+  "formato": "Blu-Ray",
+  "idioma": "Português",
+  "classificacao": "10 (BR)"
+ },
+ {
+  "id": "1787842726905339900",
+  "titulo": "Debi \u0026 Lóide",
+  "ano": 1994,
+  "duracao": "1h 47min",
+  "genero": [
+   "Comédia"
+  ],
+  "diretor": "Peter Farrely",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "10 (BR)"
  }
 ]
