@@ -2,121 +2,55 @@ package main
 
 import (
 	"bufio"
-	"encoding/json"
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 	"time"
 	"unicode"
+
 	"golang.org/x/text/runes"
 	"golang.org/x/text/transform"
 	"golang.org/x/text/unicode/norm"
 )
 
-type Filme struct {
-	ID 			  string   `json:"id"`
-	Titulo        string   `json:"titulo"`
-	Ano           int      `json:"ano"`
-	Duracao       string   `json:"duracao"`
-	Generos       []string `json:"genero"`
-	Diretor       string   `json:"diretor"`
-	Edicao        string   `json:"edicao"`
-	Formato       string   `json:"formato"`
-	Idioma        string   `json:"idioma"`
-	Classificacao string `json:"classificacao"`
-}
-
-var catalogo []Filme
-
-const arquivoBD = "meus_filmes.json"
-
-func main() {
-	carregarDados()
-
-	scanner := bufio.NewScanner(os.Stdin)
-	for {
-		fmt.Println("\n---|Catálogo de filmes mídia física|---")
-		fmt.Println("\n1. Adicionar um novo filme")
-		fmt.Println("2. Listar filmes")
-		fmt.Println("3. Excluir filme")
-		fmt.Println("4. Buscar Filme")
-		fmt.Println("5. Sair")
-		fmt.Print("\nEscolha uma opção:")
-
-		scanner.Scan()
-		opcao := scanner.Text()
-		switch strings.TrimSpace(opcao) {
-
-		case "1":
-			adicionarFilme(scanner)
-		case "2":
-			listarFilme()
-		case "3":
-			removerFilme(scanner)
-		case "4":
-			buscarFilme(scanner)
-		case "5":
-			fmt.Println("\nSaindo do catálogo...")
-			return
-		default:
-			fmt.Println("Opção Inválida, tenta de novo")
-		}
-
-	}
-
-}
-
-func carregarDados() {
-	dados, err := os.ReadFile(arquivoBD)
-	if err != nil {
-		fmt.Println("AVISO: O Arquivo JSON não foi encontrado: ", err)
-		fmt.Print("Verifique se o terminal está na pasta correta.\n\n")
-		return
-	}
-	json.Unmarshal(dados, &catalogo)
-
-	teveAlteracao := false
-	for i := range catalogo {
-		if catalogo[i].ID == "" {
-			catalogo [i].ID = gerarID()
-			teveAlteracao = true
-		}
-	}
-	if teveAlteracao {
-		salvarDados()
-	}
-}
-
-func salvarDados() {
-	dados, err := json.MarshalIndent(catalogo, "", " ")
-	if err != nil {
-		fmt.Println("Erro ao converter os dados: ", err)
-		return
-	}
-	os.WriteFile(arquivoBD, dados, 0644)
-}
-
 func adicionarFilme(scanner *bufio.Scanner) {
 	var novoFilme Filme
 
+   for {	
 	fmt.Println("Título: ")
 	scanner.Scan()
-	novoFilme.Titulo = scanner.Text()
+	titulo := strings.TrimSpace(scanner.Text())
 
+	if titulo != "" {
+		novoFilme.Titulo = titulo
+		break
+	}
+	fmt.Println("O título não pode ficar em branco. Tente de novo") 
+}
+   
+   for {
 	fmt.Println("Ano de Lançamento: ")
 	scanner.Scan()
 	anoTexto := scanner.Text()
 	anoNumero, err := strconv.Atoi(strings.TrimSpace(anoTexto))
-	if err != nil {
-		novoFilme.Ano = 0
-	} else {
-		novoFilme.Ano = anoNumero
+	if err == nil && anoNumero > 1880 && anoNumero <= time.Now().Year()+5 {
+	novoFilme.Ano = anoNumero
+	break
 	}
-
-	fmt.Println("Tempo de duração (Xh XXmin): ")
+	fmt.Print("Digite um ano válido.\n")
+   }
+   for {
+	fmt.Println("Tempo de duração total em MINUTOS (Ex.: 130): ")
 	scanner.Scan()
-	novoFilme.Duracao = scanner.Text()
+	duracaoTexto := scanner.Text()
+	duracaoNumero, err := strconv.Atoi(strings.TrimSpace(duracaoTexto))
+
+	if err == nil && duracaoNumero > 0 {
+		novoFilme.Duracao = duracaoNumero
+		break
+	}
+	fmt.Println("Erro: Apenas números (em minutos)")
+}
 
 	fmt.Println("Gêneros (separe com vírgula): ")
 	scanner.Scan()
@@ -155,7 +89,8 @@ func adicionarFilme(scanner *bufio.Scanner) {
 	salvarDados()
 	fmt.Println("\nFilme foi adicionado!")
 
-}
+	}
+
 
 func listarFilme() {
 	if len(catalogo) == 0 {
@@ -165,7 +100,7 @@ func listarFilme() {
 	fmt.Println("\n--Filmes--")
 	for i, filme := range catalogo {
 		generosFormados := strings.Join(filme.Generos, ", ")
-		fmt.Printf("%d. %s - %d | Duração: %s | (Gêneros: %s) | (Diretor: %s) | Mídia: %s - %s - %s | %s\n", i+1, filme.Titulo, filme.Ano, filme.Duracao, generosFormados, filme.Diretor, filme.Formato, filme.Edicao, filme.Idioma, filme.Classificacao)
+		fmt.Printf("%d. %s - %d | Duração: %dmin | (Gêneros: %s) | (Diretor: %s) | Mídia: %s - %s - %s | %s\n", i+1, filme.Titulo, filme.Ano, filme.Duracao, generosFormados, filme.Diretor, filme.Formato, filme.Edicao, filme.Idioma, filme.Classificacao)
 
 	}
 }
@@ -258,9 +193,4 @@ func buscarFilme(scanner *bufio.Scanner) {
 		textoSemAcento, _, _ := transform.String(t, texto)
 
 		return textoSemAcento
-	}
-
-func gerarID() string {
-	return fmt.Sprintf("%d", time.Now().UnixNano())
 }
-
