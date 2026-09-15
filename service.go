@@ -97,10 +97,13 @@ func listarFilme() {
 		fmt.Println("\nO catálogo ainda está vazio.")
 		return
 	}
+
 	fmt.Println("\n--Filmes--")
 	for i, filme := range catalogo {
+		horas := filme.Duracao / 60
+		minutos := filme.Duracao % 60
 		generosFormados := strings.Join(filme.Generos, ", ")
-		fmt.Printf("%d. %s - %d | Duração: %dmin | (Gêneros: %s) | (Diretor: %s) | Mídia: %s - %s - %s | %s\n", i+1, filme.Titulo, filme.Ano, filme.Duracao, generosFormados, filme.Diretor, filme.Formato, filme.Edicao, filme.Idioma, filme.Classificacao)
+		fmt.Printf("%d. %s - %d | Duração: %dh %dmin | (Gêneros: %s) | (Diretor: %s) | Mídia: %s - %s - %s | %s\n", i+1, filme.Titulo, filme.Ano, horas, minutos, generosFormados, filme.Diretor, filme.Formato, filme.Edicao, filme.Idioma, filme.Classificacao)
 
 	}
 }
