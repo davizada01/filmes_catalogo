@@ -629,7 +629,7 @@
   "titulo": "Tubarão",
   "ano": 1975,
   "duracao": 124,
-   "genero": [
+  "genero": [
    "Suspense",
    "Terror"
   ],
@@ -2473,5 +2473,330 @@
   "formato": "DVD",
   "idioma": "Português",
   "classificacao": "10 (BR)"
+ },
+ {
+  "id": "1789737024704617800",
+  "titulo": "Um Tiro na Noite",
+  "ano": 1981,
+  "duracao": 108,
+  "genero": [
+   "Suspense"
+  ],
+  "diretor": "Brian De Palma",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1789737146624470100",
+  "titulo": "Testemunha de Acusação",
+  "ano": 1957,
+  "duracao": 116,
+  "genero": [
+   "Suspense",
+   "Drama"
+  ],
+  "diretor": "Billy Wilder",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1789737281904645800",
+  "titulo": "Blade Runner - O Caçador de Androides",
+  "ano": 1982,
+  "duracao": 118,
+  "genero": [
+   "Drama",
+   "Ficção Científica",
+   "Suspense"
+  ],
+  "diretor": "Ridley Scott",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789737411776096300",
+  "titulo": "Amacord",
+  "ano": 1973,
+  "duracao": 123,
+  "genero": [
+   "Drama",
+   "Comédia"
+  ],
+  "diretor": "Federico Fellini",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "PortuguÊs",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789737809847454900",
+  "titulo": "Kramer vs. Kramer",
+  "ano": 1979,
+  "duracao": 105,
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Robert Benton",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789738161343720700",
+  "titulo": "A Vida É Bela",
+  "ano": 1997,
+  "duracao": 116,
+  "genero": [
+   "Comédia",
+   "Drama"
+  ],
+  "diretor": "Roberto Benigni",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "Livre (BR)"
+ },
+ {
+  "id": "1789738364631539300",
+  "titulo": "Dr. Fantástico",
+  "ano": 1964,
+  "duracao": 95,
+  "genero": [
+   "Comédia"
+  ],
+  "diretor": "Stanley Kubrick",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789739515038854200",
+  "titulo": "Ladrões de Bicicleta",
+  "ano": 1948,
+  "duracao": 89,
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Vittorio De Sica",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1789740153781528100",
+  "titulo": "Tudo Sobre Minha Mãe",
+  "ano": 1999,
+  "duracao": 101,
+  "genero": [
+   "Comédia",
+   "Drama"
+  ],
+  "diretor": "Pedro Almodóvar",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789745722688266800",
+  "titulo": "A Primeira Noite de Um Homem",
+  "ano": 1967,
+  "duracao": 107,
+  "genero": [
+   "Romance",
+   "Drama",
+   "Comédia"
+  ],
+  "diretor": "Mike Nichols",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789746343502113300",
+  "titulo": "Furyo - Em Nome Da Honra",
+  "ano": 1983,
+  "duracao": 123,
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Nagisa Oshima",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1789746520293844800",
+  "titulo": "Drácula de Bram Stoker",
+  "ano": 1992,
+  "duracao": 127,
+  "genero": [
+   "Terror",
+   "Romance"
+  ],
+  "diretor": "Francis Ford Coppola",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1789746668229546300",
+  "titulo": "Donnie Darko",
+  "ano": 2001,
+  "duracao": 114,
+  "genero": [
+   "Suspense",
+   "Fantasia"
+  ],
+  "diretor": "Richard Kelly",
+  "edicao": "Versão WideScreen",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789994157593051000",
+  "titulo": "Os Incompreendidos",
+  "ano": 1959,
+  "duracao": 99,
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Fraçois Truffaut",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789994339448736200",
+  "titulo": "Império Dos Sentidos",
+  "ano": 1976,
+  "duracao": 102,
+  "genero": [
+   "Romance",
+   "Drama"
+  ],
+  "diretor": "Nagisa Oshima",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "18 (BR)"
+ },
+ {
+  "id": "1789994402656410500",
+  "titulo": "Oldboy",
+  "ano": 2003,
+  "duracao": 120,
+  "genero": [
+   "Suspense",
+   "Ação"
+  ],
+  "diretor": "Park Chan-Wook",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "18 (BR)"
+ },
+ {
+  "id": "1789994562544257200",
+  "titulo": "Rapsódia Em Agosto",
+  "ano": 1991,
+  "duracao": 98,
+  "genero": [
+   "Drama"
+  ],
+  "diretor": "Akira Kurosawa",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1789995240942787700",
+  "titulo": "Marcas de Violência",
+  "ano": 2005,
+  "duracao": 96,
+  "genero": [
+   "Drama",
+   "Suspense"
+  ],
+  "diretor": "David Cronenberg",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "18 (BR)"
+ },
+ {
+  "id": "1789995306975870100",
+  "titulo": "Os Suspeitos",
+  "ano": 2013,
+  "duracao": 153,
+  "genero": [
+   "Suspense",
+   "Drama"
+  ],
+  "diretor": "Denis Villeneuve",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1789995429391001900",
+  "titulo": "Butch Cassidy",
+  "ano": 1969,
+  "duracao": 111,
+  "genero": [
+   "Faroeste",
+   "Drama"
+  ],
+  "diretor": "George Roy Hill",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "12 (BR)"
+ },
+ {
+  "id": "1789995580326854800",
+  "titulo": "Jogos Mortais",
+  "ano": 2004,
+  "duracao": 103,
+  "genero": [
+   "Terror",
+   "Suspense"
+  ],
+  "diretor": "James Wan",
+  "edicao": "Padrão",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "16 (BR)"
+ },
+ {
+  "id": "1789995693342361400",
+  "titulo": "Na Hora da Zona Morta",
+  "ano": 1983,
+  "duracao": 100,
+  "genero": [
+   "Terror",
+   "Ficção Científica"
+  ],
+  "diretor": "David Cronenberg",
+  "edicao": "Edição Especial",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "14 (BR)"
  }
 ]
