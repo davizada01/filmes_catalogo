@@ -2798,5 +2798,20 @@
   "formato": "DVD",
   "idioma": "Português",
   "classificacao": "14 (BR)"
+ },
+ {
+  "id": "1795102879467994100",
+  "titulo": "12 Homens e Uma Sentença",
+  "ano": 1957,
+  "duracao": 97,
+  "genero": [
+   "Drama",
+   "Suspense"
+  ],
+  "diretor": "Sidney Lumet",
+  "edicao": "Padrão ",
+  "formato": "DVD",
+  "idioma": "Português",
+  "classificacao": "Livre (BR)"
  }
 ]
